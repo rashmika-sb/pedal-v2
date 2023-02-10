@@ -1,0 +1,60 @@
+@use "../base";
+
+.section-feature {
+  background-image: linear-gradient(
+      to right bottom,
+      base.$primary-dark,
+      base.$primary-light
+    ),
+    url(../images/woman-cyceling.jpg);
+  background-size: cover;
+
+  background-position: center;
+  padding: 5rem;
+  color: base.$text-color-black;
+  transform: skewY(-7deg);
+  margin-top: -14vh;
+
+  & .feature-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 2rem;
+    transform: skewY(7deg);
+
+    & .feature-box {
+      background-color: rgba(base.$text-color-white, 0.8);
+      font-size: 0.8rem;
+      padding: 1rem 1rem;
+      width: 30ch;
+      border-radius: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      text-align: center;
+      transition: transform 0.2s;
+      cursor: pointer;
+
+      & i {
+        font-size: 2.5rem;
+        font-weight: 900;
+        background-image: linear-gradient(
+          to right,
+          base.$primary-dark,
+          base.$primary-light
+        );
+        -webkit-text-fill-color: transparent;
+        background-clip: content-box;
+        -webkit-background-clip: text;
+      }
+      & h3 {
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

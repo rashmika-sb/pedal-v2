@@ -1,0 +1,71 @@
+@use "../base";
+
+.button:link,
+.button:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 100px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px base.$box-shadow-color;
+}
+
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px base.$box-shadow-color;
+}
+
+.button-white {
+  display: inline-block;
+  background-color: base.$text-color-white;
+  color: base.$text-color-black;
+  padding: 10px 30px;
+}
+
+.button::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.button-white::after {
+  background-color: base.$text-color-white;
+}
+
+.button:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.button-animate {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.button-read-more {
+  background-color: base.$primary-light;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.7rem;
+  display: inline-block;
+  border-radius: 100px;
+  color: base.$text-color-black;
+
+  &:hover,
+  :active {
+    background-color: base.$primary-dark;
+    color: base.$text-color-white;
+  }
+}
