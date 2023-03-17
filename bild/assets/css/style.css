@@ -325,6 +325,15 @@ footer {
   font-weight: 900;
 }
 
+.footer-icon {
+  /* font-size: 2.5rem; */
+  font-weight: 900;
+  -webkit-text-fill-color: black;
+  we
+  /* background-clip: content-box; */
+  /* -webkit-background-clip: text; */
+}
+
 /* animations */
 @keyframes moveInLeft {
   0% {
